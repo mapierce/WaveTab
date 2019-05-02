@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'WaveTab_Example' do
+  pod 'WaveTab', :path => '../'
+
+  target 'WaveTab_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
