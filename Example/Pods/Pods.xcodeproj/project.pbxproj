@@ -8,12 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0073D95529E78B4CBB3C387F10675252 /* Pods-WaveTab_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDA8B3B5DE578F4B9B7B1F3BB7394AE /* Pods-WaveTab_Tests-dummy.m */; };
-		089C5D216E895F5D5DFC012D41FC869B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		1C40024DC4D6AEA69773EF9211ECAC35 /* WaveTab-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E66CD838D8B65A503F4E22D7F20AEACF /* WaveTab-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		34348CB8228C86F600960396 /* WaveNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34348CB6228C86F200960396 /* WaveNav.swift */; };
-		3B1076E6C21C4AA3101D6E40C786396E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		34348CCE228C8BE000960396 /* WaveTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34348CCD228C8BE000960396 /* WaveTabBarController.swift */; };
 		3B26BC6BA2FEAA793966C7A54418C230 /* Pods-WaveTab_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B116CDB21FB492F175DC1C642F7F7A0 /* Pods-WaveTab_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5AE87A08BECCB7C24370462A4FDB413A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		D2B0B5C375E5E57AFD1118FE8C53BB08 /* Pods-WaveTab_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D47152A5F2EDBD60753C828AE345A /* Pods-WaveTab_Example-dummy.m */; };
 		E78816D6A709B5E24FE50E09DA8F7DDA /* Pods-WaveTab_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 768026B571A7DA26678FD80E68B3B38C /* Pods-WaveTab_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9C898C1D7BFB7E28DAF7D0B099969D8 /* WaveTab-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E399AB13384C21069678BDF3ECD4879 /* WaveTab-dummy.m */; };
@@ -44,12 +41,11 @@
 		2F5E7044142024B4FBA13FE07A74D18F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		310CA3CC281E33FA3157CD9710BC60F4 /* Pods-WaveTab_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WaveTab_Example-frameworks.sh"; sourceTree = "<group>"; };
 		323DA424CE4A5EBB972F61B6C6B20338 /* Pods-WaveTab_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WaveTab_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		34348CB6228C86F200960396 /* WaveNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WaveNav.swift; path = WaveTab/Classes/WaveNav.swift; sourceTree = "<group>"; };
+		34348CCD228C8BE000960396 /* WaveTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WaveTabBarController.swift; path = "../WaveTab/Classes/Wave Tab Bar Controller/WaveTabBarController.swift"; sourceTree = "<group>"; };
 		3B116CDB21FB492F175DC1C642F7F7A0 /* Pods-WaveTab_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WaveTab_Example-umbrella.h"; sourceTree = "<group>"; };
 		42E649A5834FD5449486DA0D9C16C0D9 /* WaveTab.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WaveTab.xcconfig; sourceTree = "<group>"; };
 		455B351C0F930DC50331111C5F55FB18 /* WaveTab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WaveTab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5052C3A6AD476032CF50F7D79AF79728 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6CCE22A16988548BC801458426AF7DFA /* Pods-WaveTab_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WaveTab_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D0A61E229996EE09F0D98F078C5D3E4 /* Pods-WaveTab_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WaveTab_Example.modulemap"; sourceTree = "<group>"; };
 		6E54AC75976E08017BD4A4629AB2DA74 /* Pods-WaveTab_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WaveTab_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				089C5D216E895F5D5DFC012D41FC869B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B1076E6C21C4AA3101D6E40C786396E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AE87A08BECCB7C24370462A4FDB413A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,12 +104,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+		34348CCC228C8BBC00960396 /* Wave Tab Bar Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+				34348CCD228C8BE000960396 /* WaveTabBarController.swift */,
 			);
-			name = iOS;
+			path = "Wave Tab Bar Controller";
 			sourceTree = "<group>";
 		};
 		5F8BBAEE66F935610AC2B4DDE53EE972 /* Pods-WaveTab_Example */ = {
@@ -140,9 +133,9 @@
 		71877BC093FBE82820E82BE77BC12397 /* WaveTab */ = {
 			isa = PBXGroup;
 			children = (
+				34348CCC228C8BBC00960396 /* Wave Tab Bar Controller */,
 				92A9C809D96D4CBF01543C7BCD224498 /* Pod */,
 				9089934FB1671BC85350DC6FBEF0BC5E /* Support Files */,
-				34348CB6228C86F200960396 /* WaveNav.swift */,
 			);
 			name = WaveTab;
 			path = ../..;
@@ -161,7 +154,6 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				7471476952A54E08B5BE7011961A8AD9 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				A278F95805EBD427B45B767A0A5F1BFD /* Products */,
 				11C6CEBEDE70EA3255E319CC16BB5532 /* Targets Support Files */,
 			);
@@ -199,14 +191,6 @@
 				455B351C0F930DC50331111C5F55FB18 /* WaveTab.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5E0D919E635D23B70123790B8308F8EF /* iOS */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D8CA0B1ADB85E506B947D6EC0752C7C3 /* Pods-WaveTab_Tests */ = {
@@ -395,8 +379,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34348CB8228C86F600960396 /* WaveNav.swift in Sources */,
 				F9C898C1D7BFB7E28DAF7D0B099969D8 /* WaveTab-dummy.m in Sources */,
+				34348CCE228C8BE000960396 /* WaveTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
