@@ -7,6 +7,16 @@
 
 import UIKit
 
-class WaveTabBarController: UITabBarController {
+class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
+    
+    var presenter: WaveTabBarPresenter!
+    
+    // MARK: - Lifecycle
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        presenter = WaveTabBarPresenterBase(view: self)
+    }
     
 }
