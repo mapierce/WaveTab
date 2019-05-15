@@ -1,0 +1,22 @@
+{
+  "name": "WaveTab",
+  "version": "0.1.0",
+  "summary": "A short description of WaveTab.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Matthew Pierce/WaveTab",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Matthew Pierce": "mapierce@tcd.ie"
+  },
+  "source": {
+    "git": "https://github.com/Matthew Pierce/WaveTab.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "WaveTab/Classes/**/*"
+}

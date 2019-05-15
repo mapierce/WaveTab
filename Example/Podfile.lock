@@ -1,0 +1,16 @@
+PODS:
+  - WaveTab (0.1.0)
+
+DEPENDENCIES:
+  - WaveTab (from `../`)
+
+EXTERNAL SOURCES:
+  WaveTab:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WaveTab: b325f6c0f63f2a3fecdcb5493326a78c74050759
+
+PODFILE CHECKSUM: ddad411c0f6053494e4bd91f02d8bb9afd9a074e
+
+COCOAPODS: 1.5.3

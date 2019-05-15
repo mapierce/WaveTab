@@ -1,0 +1,6 @@
+framework module WaveTab {
+  umbrella header "WaveTab-umbrella.h"
+
+  export *
+  module * { export * }
+}
