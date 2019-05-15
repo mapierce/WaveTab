@@ -10,4 +10,7 @@ import Foundation
 protocol WaveTabBarPresenter: class {
     
     var view: WaveTabBarProtocol { get }
+    
+    func viewDidAppear()
+    
 }

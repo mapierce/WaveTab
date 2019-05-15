@@ -9,4 +9,6 @@ import Foundation
 
 protocol WaveTabBarProtocol: class {
     
+    func setupCurve()
+    
 }

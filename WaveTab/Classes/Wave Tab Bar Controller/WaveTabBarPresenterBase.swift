@@ -17,4 +17,10 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
         self.view = view
     }
     
+    // MARK: - WaveTabBarPresent functions
+    
+    func viewDidAppear() {
+        view.setupCurve()
+    }
+    
 }
