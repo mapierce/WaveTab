@@ -9,6 +9,13 @@ import Foundation
 
 class WaveTabBarPresenterBase: WaveTabBarPresenter {
     
+    private struct Constants {
+        
+        static let radiusSize: Float = 30
+        static let circleWidth: Float = 50.0
+        
+    }
+    
     unowned let view: WaveTabBarProtocol
     
     // MARK: - Initialization
@@ -20,7 +27,20 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
     // MARK: - WaveTabBarPresent functions
     
     func viewDidAppear() {
-        view.setupCurve()
+        view.setupTabBarTags()
+        view.setupCurve(Constants.radiusSize)
+        view.setupCircle(Constants.circleWidth)
+        view.setupTabBarStyling()
+        view.setupImageView(Constants.circleWidth / 2)
+    }
+    
+    func tabBarDidSelectItem(with tag: Int) {
+        view.moveCurve(to: tag, with: Constants.radiusSize)
+        view.moveCircle(with: 0.2, and: Constants.radiusSize)
+    }
+    
+    func moveCircleComplete() {
+        view.updateImageView()
     }
     
 }

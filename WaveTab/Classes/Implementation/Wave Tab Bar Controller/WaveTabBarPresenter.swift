@@ -13,4 +13,8 @@ protocol WaveTabBarPresenter: class {
     
     func viewDidAppear()
     
+    func tabBarDidSelectItem(with tag: Int)
+    
+    func moveCircleComplete()
+    
 }

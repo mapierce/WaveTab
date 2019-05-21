@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="WaveTab_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,11 +22,30 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="gdl-Cj-0Dv"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="gdl-Cj-0Dv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+            <point key="canvasLocation" x="1066" y="-260"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Yv0-8l-QhL">
+            <objects>
+                <viewController id="mGS-GM-z8d" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="swv-mv-fYD"/>
+                        <viewControllerLayoutGuide type="bottom" id="ib8-Yg-uhA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TC7-0i-MLW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="I6s-nb-SYV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yzl-Pt-zbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="550"/>
         </scene>
         <!--Wave Tab Bar Controller-->
         <scene sceneID="loa-dS-S2X">
@@ -34,11 +53,13 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Weh-Qe-dOb" customClass="WaveTabBarController" customModule="WaveTab" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="72p-VV-nk5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="jaz-jc-tgi"/>
+                        <segue destination="mGS-GM-z8d" kind="relationship" relationship="viewControllers" id="Ct1-NO-VCI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3e-yc-oD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
