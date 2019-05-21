@@ -18,7 +18,7 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     }
     
     var presenter: WaveTabBarPresenter!
-    private var waveCurve: UIBezierPath
+    private var waveCurve: UIBezierPath!
     
     private let waveSubLayer: CAShapeLayer = {
         let subLayer = CAShapeLayer()
