@@ -56,16 +56,13 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     // MARK: - Overridden functions
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        super.tabBar(tabBar, didSelect: item)
-        print("didselect")
-        
-        presenter.tabBarDidSelectItem(with: item.tag + 1)
+        presenter.tabBarDidSelectItem(with: item.tag+1)
     }
     
     // MARK: - WaveTabBarProtocol functions
     
     func setupTabBarTags() {
-        tabBarItems.enumerated().forEach { $0.element.tag = $0.offset }
+        viewControllers?.enumerated().forEach { $0.element.tabBarItem.tag = $0.offset }
     }
     
     func setupCurve(_ radius: Float) {
@@ -102,7 +99,7 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     }
     
     func moveCurve(to index: Int, with radius: Float) {
-        let endPath = UIBezierPath.createCurve(at: tabBarItems[index].center.x, radius: CGFloat(radius), on: tabBar)
+        let endPath = UIBezierPath.createCurve(at: tabBar.subviews[index].center.x, radius: CGFloat(radius), on: tabBar)
         CATransaction.begin()
         CATransaction.setCompletionBlock {
             self.waveSubLayer.path = endPath.cgPath
