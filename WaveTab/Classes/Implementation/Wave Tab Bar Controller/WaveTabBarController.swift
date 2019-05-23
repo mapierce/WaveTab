@@ -12,7 +12,6 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     private struct Constants {
         
         static let tabBarButtonType = "UITabBarButton"
-        static let waveColor: CGColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1).cgColor
         
     }
     
@@ -23,7 +22,6 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     
     private let waveSubLayer: CAShapeLayer = {
         let subLayer = CAShapeLayer()
-        subLayer.fillColor = Constants.waveColor
         return subLayer
     }()
     
@@ -75,11 +73,13 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         circle = UIView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(width), height: CGFloat(width)))
         circle.layer.cornerRadius = CGFloat(width) / 2
         circle.center = CGPoint(x: tabBarItems[selectedIndex].center.x, y: 0.0)
-        circle.backgroundColor = .green
         tabBar.addSubview(circle)
     }
     
     func setupTabBarStyling() {
+        waveSubLayer.fillColor = tabBar.backgroundColor?.cgColor
+        circle.backgroundColor = tabBar.backgroundColor
+        tabBar.backgroundColor = .clear
         tabBar.tintColor = UIColor.clear
         tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
