@@ -12,7 +12,7 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
     private struct Constants {
         
         static let radiusSize: Float = 30
-        static let circleWidth: Float = 50.0
+        static let circleWidth: Float = 57.0
         
     }
     
@@ -26,12 +26,16 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
     
     // MARK: - WaveTabBarPresent functions
     
+    func viewDidLoad() {
+        view.disableTransparentTabBar()
+    }
+    
     func viewDidAppear() {
         view.setupTabBarTags()
         view.setupCurve(Constants.radiusSize)
         view.setupCircle(Constants.circleWidth)
-        view.setupTabBarStyling()
         view.setupImageView(Constants.circleWidth / 2)
+        view.setupTabBarStyling()
     }
     
     func tabBarDidSelectItem(with tag: Int) {

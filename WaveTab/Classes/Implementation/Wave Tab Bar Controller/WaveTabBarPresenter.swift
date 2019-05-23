@@ -11,6 +11,8 @@ protocol WaveTabBarPresenter: class {
     
     var view: WaveTabBarProtocol { get }
     
+    func viewDidLoad()
+    
     func viewDidAppear()
     
     func tabBarDidSelectItem(with tag: Int)

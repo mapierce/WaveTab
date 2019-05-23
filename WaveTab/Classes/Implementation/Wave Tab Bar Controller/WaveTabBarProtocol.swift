@@ -9,6 +9,8 @@ import Foundation
 
 protocol WaveTabBarProtocol: class {
     
+    func disableTransparentTabBar()
+    
     func setupTabBarTags()
     
     func setupCurve(_ radius: Float)
