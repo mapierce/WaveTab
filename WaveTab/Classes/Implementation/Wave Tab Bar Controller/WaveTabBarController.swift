@@ -20,7 +20,6 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     }
     
     var presenter: WaveTabBarPresenter!
-    private var waveCurve: UIBezierPath!
     private var circle: UIView!
     private var imageView: UIImageView!
     
@@ -67,6 +66,14 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         presenter.tabBarDidSelectItem(with: item.tag+1)
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        DispatchQueue.main.async {
+            self.presenter.tabBarDidSelectItem(with: self.selectedIndex+1)
+        }
     }
     
     // MARK: - WaveTabBarProtocol functions
