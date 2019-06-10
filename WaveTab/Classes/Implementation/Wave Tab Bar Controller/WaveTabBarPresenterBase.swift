@@ -10,13 +10,17 @@ import Foundation
 class WaveTabBarPresenterBase: WaveTabBarPresenter {
     
     private struct Constants {
-        
-        static let radiusSize: Float = 30
-        static let circleWidth: Float = 57.0
+    
+        static let smallRadius: Float = 25
+        static let bigRadius: Float = 30
+        static let smallCircle: Float = 47
+        static let bigCircle: Float = 57
+        static let animationDuration: TimeInterval = 0.2
         
     }
-    
+
     unowned let view: WaveTabBarProtocol
+    private var isPortrait = true
     
     // MARK: - Initialization
     
@@ -30,17 +34,26 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
         view.disableTransparentTabBar()
     }
     
-    func viewDidAppear() {
+    func viewDidAppear(with portraitOrientation: Bool) {
+        isPortrait = portraitOrientation
         view.setupTabBarTags()
-        view.setupCurve(Constants.radiusSize)
-        view.setupCircle(Constants.circleWidth)
-        view.setupImageView(Constants.circleWidth / 2)
+        view.setupCurve(isPortrait ? Constants.bigRadius : Constants.smallRadius)
+        view.setupCircle(isPortrait ? Constants.bigCircle : Constants.smallCircle)
+        view.setupImageView((isPortrait ? Constants.bigCircle : Constants.smallCircle) / 2)
         view.setupTabBarStyling()
     }
     
+    func viewDidRotate(with portraitOrientation: Bool, at index: Int) {
+        isPortrait = portraitOrientation
+        view.updateCircleSize(isPortrait ? Constants.bigCircle : Constants.smallCircle)
+        view.updateImageViewSize((isPortrait ? Constants.bigCircle : Constants.smallCircle) / 2)
+        view.moveCurve(to: index, with: isPortrait ? Constants.bigRadius : Constants.smallRadius)
+        view.moveCircle(with: Constants.animationDuration, and: isPortrait ? Constants.bigRadius : Constants.smallRadius)
+    }
+    
     func tabBarDidSelectItem(with tag: Int) {
-        view.moveCurve(to: tag, with: Constants.radiusSize)
-        view.moveCircle(with: 0.2, and: Constants.radiusSize)
+        view.moveCurve(to: tag, with: isPortrait ? Constants.bigRadius : Constants.smallRadius)
+        view.moveCircle(with: Constants.animationDuration, and: isPortrait ? Constants.bigRadius : Constants.smallRadius)
     }
     
     func moveCircleComplete() {

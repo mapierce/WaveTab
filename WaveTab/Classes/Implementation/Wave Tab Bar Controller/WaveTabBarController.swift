@@ -20,8 +20,8 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     }
     
     var presenter: WaveTabBarPresenter!
-    private var circle: UIView!
-    private var imageView: UIImageView!
+    private var circle: UIView?
+    private var imageView: UIImageView?
     
     private let waveSubLayer: CAShapeLayer = {
         let subLayer = CAShapeLayer()
@@ -59,7 +59,7 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        presenter.viewDidAppear()
+        presenter.viewDidAppear(with: UIDevice.current.orientation.isPortrait)
     }
     
     // MARK: - Overridden functions
@@ -72,7 +72,7 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         super.viewWillTransition(to: size, with: coordinator)
         
         DispatchQueue.main.async {
-            self.presenter.tabBarDidSelectItem(with: self.selectedIndex+1)
+            self.presenter.viewDidRotate(with: UIDevice.current.orientation.isPortrait, at: self.selectedIndex + 1)
         }
     }
     
@@ -94,11 +94,17 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     
     func setupCircle(_ width: Float) {
         circle = UIView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(width), height: CGFloat(width)))
-        circle.layer.cornerRadius = CGFloat(width) / 2
-        circle.center = CGPoint(x: tabBarItems[selectedIndex].center.x, y: 0.0)
-        circle.layer.borderWidth = Constants.borderWidth
-        circle.layer.borderColor = Constants.borderColor
-        tabBar.addSubview(circle)
+        circle?.layer.cornerRadius = CGFloat(width) / 2
+        circle?.center = CGPoint(x: tabBarItems[selectedIndex].center.x, y: 0.0)
+        circle?.layer.borderWidth = Constants.borderWidth
+        circle?.layer.borderColor = Constants.borderColor
+        tabBar.addSubview(circle!)
+    }
+    
+    func updateCircleSize(_ radius: Float) {
+        guard let circle = circle else { return }
+        circle.frame = CGRect(x: circle.frame.origin.x, y: circle.frame.origin.y, width: CGFloat(radius), height: CGFloat(radius))
+        circle.layer.cornerRadius = CGFloat(radius) / 2
     }
     
     func setupTabBarStyling() {
@@ -113,7 +119,7 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
             }
         }
         waveSubLayer.fillColor = backgroundColor.cgColor
-        circle.backgroundColor = backgroundColor
+        circle?.backgroundColor = backgroundColor
         tabBar.backgroundColor = .clear
         tabBar.tintColor = UIColor.clear
         tabBar.backgroundImage = UIImage()
@@ -123,14 +129,19 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     func setupImageView(_ center: Float) {
         let image = viewControllers?[selectedIndex].tabBarItem.selectedImage?.withRenderingMode(.alwaysTemplate)
         imageView = UIImageView(image: image)
-        imageView.contentMode = UIView.ContentMode.scaleAspectFit
-        imageView.tintColor = tabBar.tintColor
-        circle.addSubview(imageView)
+        imageView?.contentMode = UIView.ContentMode.scaleAspectFit
+        imageView?.tintColor = tabBar.tintColor
+        circle?.addSubview(imageView!)
+        imageView?.center = CGPoint(x: CGFloat(center), y: CGFloat(center))
+    }
+    
+    func updateImageViewSize(_ center: Float) {
+        guard let imageView = imageView else { return }
         imageView.center = CGPoint(x: CGFloat(center), y: CGFloat(center))
     }
     
     func updateImageView() {
-        imageView.image = viewControllers?[selectedIndex].tabBarItem.selectedImage?.withRenderingMode(.alwaysTemplate)
+        imageView?.image = viewControllers?[selectedIndex].tabBarItem.selectedImage?.withRenderingMode(.alwaysTemplate)
     }
     
     func moveCurve(to index: Int, with radius: Float) {
@@ -152,15 +163,16 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     
     func moveCircle(with duration: TimeInterval, and circleOffset: Float) {
         tabBar.isUserInteractionEnabled = false
+        guard let circle = circle else { return }
         UIView.animate(withDuration: duration, animations: {
-            self.circle.center = CGPoint(x: self.circle.center.x, y: self.circle.center.y + CGFloat(circleOffset))
-            self.circle.alpha = 0.0
+            circle.center = CGPoint(x: circle.center.x, y: circle.center.y + CGFloat(circleOffset))
+            circle.alpha = 0.0
         }) { _ in
-            self.circle.center = CGPoint(x: self.tabBarItems[self.selectedIndex].center.x, y: self.circle.center.y)
+            circle.center = CGPoint(x: self.tabBarItems[self.selectedIndex].center.x, y: circle.center.y)
             self.presenter.moveCircleComplete()
             UIView.animate(withDuration: duration, animations: {
-                self.circle.center = CGPoint(x: self.circle.center.x, y: self.circle.center.y - CGFloat(circleOffset))
-                self.circle.alpha = 1.0
+                circle.center = CGPoint(x: circle.center.x, y: circle.center.y - CGFloat(circleOffset))
+                circle.alpha = 1.0
             }) { _ in
                 self.tabBar.isUserInteractionEnabled = true
             }

@@ -13,7 +13,9 @@ protocol WaveTabBarPresenter: class {
     
     func viewDidLoad()
     
-    func viewDidAppear()
+    func viewDidAppear(with portraitOrientation: Bool)
+    
+    func viewDidRotate(with portraitOrientation: Bool, at index: Int)
     
     func tabBarDidSelectItem(with tag: Int)
     
