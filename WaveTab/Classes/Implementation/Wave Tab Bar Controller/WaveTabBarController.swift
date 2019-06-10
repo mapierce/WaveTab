@@ -14,8 +14,8 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         static let tabBarButtonType = "UITabBarButton"
         static let borderWidth: CGFloat = 0.5
         static let borderColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.3).cgColor
-        static let whiteBackgroundColor = UIColor(red: 246/255, green: 247/255, blue: 248/255, alpha: 1.0)
-        static let blackBackgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)
+        static let whiteBackgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.9)
+        static let blackBackgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.9)
         
     }
     
@@ -103,7 +103,7 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     
     func setupTabBarStyling() {
         let backgroundColor: UIColor
-        if let color = tabBar.backgroundColor {
+        if let color = tabBar.barTintColor {
             backgroundColor = color
         } else {
             switch tabBar.barStyle {
