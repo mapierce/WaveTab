@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		32B7CE523D8085739E2F4ED9 /* Pods_WaveTab_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF4BF08F5777EC9D4D77E0D /* Pods_WaveTab_Tests.framework */; };
 		349AF33822B17E1A00F462CC /* WaveTabBarPresenterUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AF33722B17E1A00F462CC /* WaveTabBarPresenterUnitTests.swift */; };
+		34C0392D22B1887B003CFE8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C0392C22B1887B003CFE8E /* Main.storyboard */; };
+		34C0392F22B18884003CFE8E /* Some.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C0392E22B18884003CFE8E /* Some.storyboard */; };
+		34C0393322B188E7003CFE8E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0393222B188E7003CFE8E /* HomeViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
+		607FACDB1AFB9204008FA782 /* Lots.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Lots.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		7BFE41BEF38702411F22DEF2 /* Pods_WaveTab_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF604FA7070E680FAECA2760 /* Pods_WaveTab_Example.framework */; };
@@ -30,11 +33,14 @@
 		1DF4BF08F5777EC9D4D77E0D /* Pods_WaveTab_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaveTab_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		246E19E9FAD5AF2C36F61251 /* Pods-WaveTab_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveTab_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaveTab_Tests/Pods-WaveTab_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		349AF33722B17E1A00F462CC /* WaveTabBarPresenterUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveTabBarPresenterUnitTests.swift; sourceTree = "<group>"; };
+		34C0392C22B1887B003CFE8E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		34C0392E22B18884003CFE8E /* Some.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Some.storyboard; sourceTree = "<group>"; };
+		34C0393222B188E7003CFE8E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3EF357E85FBD2B50FFDA5CB8 /* Pods-WaveTab_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveTab_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaveTab_Example/Pods-WaveTab_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* WaveTab_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaveTab_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Lots.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* WaveTab_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaveTab_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +84,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		34C0393022B188B9003CFE8E /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		34C0393122B188C5003CFE8E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34C0393222B188E7003CFE8E /* HomeViewController.swift */,
+				34C0392C22B1887B003CFE8E /* Main.storyboard */,
+				34C0392E22B18884003CFE8E /* Some.storyboard */,
+				607FACD91AFB9204008FA782 /* Lots.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -102,10 +127,8 @@
 		607FACD21AFB9204008FA782 /* Example for WaveTab */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				34C0393022B188B9003CFE8E /* App Delegate */,
+				34C0393122B188C5003CFE8E /* Views */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for WaveTab";
@@ -115,6 +138,8 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -244,9 +269,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				607FACDB1AFB9204008FA782 /* Lots.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				34C0392F22B18884003CFE8E /* Some.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				34C0392D22B1887B003CFE8E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				34C0393322B188E7003CFE8E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,12 +384,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
+		607FACD91AFB9204008FA782 /* Lots.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				607FACDA1AFB9204008FA782 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Lots.storyboard;
 			sourceTree = "<group>";
 		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
