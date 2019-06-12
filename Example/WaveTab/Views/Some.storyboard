@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="zTF-QB-8OX">
             <objects>
-                <viewController id="kGf-PQ-nH9" sceneMemberID="viewController">
+                <viewController id="kGf-PQ-nH9" customClass="DetailViewController" customModule="WaveTab_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mcv-4z-KfM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="1077.5999999999999" y="111.99400299850076"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="5Kj-fC-XYI">
             <objects>
-                <viewController id="RRB-vn-7Lk" sceneMemberID="viewController">
+                <viewController id="RRB-vn-7Lk" customClass="DetailViewController" customModule="WaveTab_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="02y-Ae-FA1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="2023.2" y="111.99400299850076"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="PfX-NR-TQZ">
             <objects>
-                <viewController id="akO-f2-J13" sceneMemberID="viewController">
+                <viewController id="akO-f2-J13" customClass="DetailViewController" customModule="WaveTab_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2DR-XJ-jn1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,6 +100,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hKy-Bz-5to" customClass="WaveTabBarController" customModule="WaveTab" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VRT-bS-v1b">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
