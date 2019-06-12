@@ -65,7 +65,7 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        presenter.viewDidAppear(with: UIDevice.current.orientation.isPortrait)
+        presenter.viewDidAppear(portrait: UIDevice.current.orientation.isPortrait)
     }
     
     // MARK: - Overridden functions
@@ -78,7 +78,7 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         super.viewWillTransition(to: size, with: coordinator)
         
         DispatchQueue.main.async {
-            self.presenter.viewDidRotate(with: UIDevice.current.orientation.isPortrait, at: self.safeSelectedIndex + 1)
+            self.presenter.viewDidRotate(portrait: UIDevice.current.orientation.isPortrait, at: self.safeSelectedIndex + 1)
         }
     }
     

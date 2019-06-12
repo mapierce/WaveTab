@@ -35,7 +35,7 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
         view.disableTransparentTabBar()
     }
     
-    func viewDidAppear(with portraitOrientation: Bool) {
+    func viewDidAppear(portrait portraitOrientation: Bool) {
         isPortrait = portraitOrientation
         view.setupTabBarTags()
         view.setupCurve(isPortrait ? Constants.bigRadius : Constants.smallRadius)
@@ -44,7 +44,7 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
         view.setupTabBarStyling()
     }
     
-    func viewDidRotate(with portraitOrientation: Bool, at index: Int) {
+    func viewDidRotate(portrait portraitOrientation: Bool, at index: Int) {
         isPortrait = portraitOrientation
         view.updateCircleSize(isPortrait ? Constants.bigCircle : Constants.smallCircle)
         view.updateImageViewSize((isPortrait ? Constants.bigCircle : Constants.smallCircle) / 2)
