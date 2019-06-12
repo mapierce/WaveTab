@@ -16,6 +16,8 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         static let borderColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.3).cgColor
         static let whiteBackgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.9)
         static let blackBackgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.9)
+        static let fullAlpha: CGFloat = 1.0
+        static let emptyAlpha: CGFloat = 0.0
         
     }
     
@@ -166,22 +168,31 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         CATransaction.commit()
     }
     
-    func moveCircle(with duration: TimeInterval, and circleOffset: Float) {
+    func moveCircle(over duration: TimeInterval, offset circleOffset: Float, down movingDown: Bool) {
         tabBar.isUserInteractionEnabled = false
         guard let circle = circle else { return }
         UIView.animate(withDuration: duration, animations: {
-            circle.center = CGPoint(x: circle.center.x, y: circle.center.y + CGFloat(circleOffset))
-            circle.alpha = 0.0
-        }) { _ in
-            circle.center = CGPoint(x: self.tabBarItems[self.safeSelectedIndex].center.x, y: circle.center.y)
-            self.presenter.moveCircleComplete()
-            UIView.animate(withDuration: duration, animations: {
-                circle.center = CGPoint(x: circle.center.x, y: circle.center.y - CGFloat(circleOffset))
-                circle.alpha = 1.0
-            }) { _ in
+            let verticalPosition = movingDown ? circle.center.y + CGFloat(circleOffset) : circle.center.y - CGFloat(circleOffset)
+            circle.center = CGPoint(x: circle.center.x, y: verticalPosition)
+            circle.alpha = movingDown ? Constants.emptyAlpha : Constants.fullAlpha
+        }, completion: { _ in
+            self.presenter.moveCircleComplete(down: movingDown)
+            if !movingDown {
                 self.tabBar.isUserInteractionEnabled = true
             }
-        }
+        })
+    }
+    
+    func updateCircleCenter() {
+        guard let circle = circle else { return }
+        circle.center = CGPoint(x: self.tabBarItems[self.safeSelectedIndex].center.x, y: circle.center.y)
+    }
+    
+    func moveCircleAnimationDown(_ down: Bool, with offset: Float) {
+        guard let circle = circle else { return }
+        let verticalPosition = down ? circle.center.y + CGFloat(offset) : circle.center.y - CGFloat(offset)
+        circle.center = CGPoint(x: circle.center.x, y: verticalPosition)
+        circle.alpha = down ? Constants.emptyAlpha : Constants.fullAlpha
     }
     
 }

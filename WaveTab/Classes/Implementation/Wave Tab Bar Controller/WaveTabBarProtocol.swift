@@ -29,6 +29,8 @@ protocol WaveTabBarProtocol: class {
     
     func moveCurve(with duration: TimeInterval, to index: Int, with radius: Float)
     
-    func moveCircle(with duration: TimeInterval, and circleOffset: Float)
+    func moveCircle(over duration: TimeInterval, offset circleOffset: Float, down movingDown: Bool)
+    
+    func updateCircleCenter()
     
 }

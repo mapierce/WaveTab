@@ -51,18 +51,28 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
         view.moveCurve(with: Constants.waveAnimationDuration,
                        to: index,
                        with: isPortrait ? Constants.bigRadius : Constants.smallRadius)
-        view.moveCircle(with: Constants.circleAnimationDuration, and: isPortrait ? Constants.bigRadius : Constants.smallRadius)
+        view.moveCircle(over: Constants.circleAnimationDuration,
+                        offset: isPortrait ? Constants.bigRadius : Constants.smallRadius,
+                        down: true)
     }
     
     func tabBarDidSelectItem(with tag: Int) {
         view.moveCurve(with: Constants.waveAnimationDuration,
                        to: tag,
                        with: isPortrait ? Constants.bigRadius : Constants.smallRadius)
-        view.moveCircle(with: Constants.circleAnimationDuration, and: isPortrait ? Constants.bigRadius : Constants.smallRadius)
+        view.moveCircle(over: Constants.circleAnimationDuration,
+                        offset: isPortrait ? Constants.bigRadius : Constants.smallRadius,
+                        down: true)
     }
     
-    func moveCircleComplete() {
+    func moveCircleComplete(down movingDown: Bool) {
         view.updateImageView()
+        view.updateCircleCenter()
+        if movingDown {
+            view.moveCircle(over: Constants.circleAnimationDuration,
+                            offset: isPortrait ? Constants.bigRadius : Constants.smallRadius,
+                            down: false)
+        }
     }
     
 }
