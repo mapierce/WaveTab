@@ -15,7 +15,8 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
         static let bigRadius: Float = 30
         static let smallCircle: Float = 47
         static let bigCircle: Float = 57
-        static let animationDuration: TimeInterval = 0.2
+        static let circleAnimationDuration: TimeInterval = 0.2
+        static let waveAnimationDuration: TimeInterval = Constants.circleAnimationDuration * 2
         
     }
 
@@ -47,13 +48,17 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
         isPortrait = portraitOrientation
         view.updateCircleSize(isPortrait ? Constants.bigCircle : Constants.smallCircle)
         view.updateImageViewSize((isPortrait ? Constants.bigCircle : Constants.smallCircle) / 2)
-        view.moveCurve(to: index, with: isPortrait ? Constants.bigRadius : Constants.smallRadius)
-        view.moveCircle(with: Constants.animationDuration, and: isPortrait ? Constants.bigRadius : Constants.smallRadius)
+        view.moveCurve(with: Constants.waveAnimationDuration,
+                       to: index,
+                       with: isPortrait ? Constants.bigRadius : Constants.smallRadius)
+        view.moveCircle(with: Constants.circleAnimationDuration, and: isPortrait ? Constants.bigRadius : Constants.smallRadius)
     }
     
     func tabBarDidSelectItem(with tag: Int) {
-        view.moveCurve(to: tag, with: isPortrait ? Constants.bigRadius : Constants.smallRadius)
-        view.moveCircle(with: Constants.animationDuration, and: isPortrait ? Constants.bigRadius : Constants.smallRadius)
+        view.moveCurve(with: Constants.waveAnimationDuration,
+                       to: tag,
+                       with: isPortrait ? Constants.bigRadius : Constants.smallRadius)
+        view.moveCircle(with: Constants.circleAnimationDuration, and: isPortrait ? Constants.bigRadius : Constants.smallRadius)
     }
     
     func moveCircleComplete() {

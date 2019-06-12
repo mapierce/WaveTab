@@ -69,7 +69,7 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     // MARK: - Overridden functions
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        presenter.tabBarDidSelectItem(with: item.tag+1)
+        presenter.tabBarDidSelectItem(with: item.tag)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -87,7 +87,7 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     }
     
     func setupTabBarTags() {
-        viewControllers?.enumerated().forEach { $0.element.tabBarItem.tag = $0.offset }
+        viewControllers?.enumerated().forEach { $0.element.tabBarItem.tag = $0.offset + 1 }
     }
     
     func setupCurve(_ radius: Float) {
@@ -148,8 +148,9 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         imageView?.image = viewControllers?[safeSelectedIndex].tabBarItem.selectedImage?.withRenderingMode(.alwaysTemplate)
     }
     
-    func moveCurve(to index: Int, with radius: Float) {
-        let endPath = UIBezierPath.createCurve(at: tabBar.subviews[index].center.x, radius: CGFloat(radius), on: tabBar)
+    func moveCurve(with duration: TimeInterval, to index: Int, with radius: Float) {
+        let safeIndex = index == 0 ? tabBarItems.count : index
+        let endPath = UIBezierPath.createCurve(at: tabBar.subviews[safeIndex].center.x, radius: CGFloat(radius), on: tabBar)
         CATransaction.begin()
         CATransaction.setCompletionBlock {
             self.waveSubLayer.path = endPath.cgPath
@@ -157,7 +158,7 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         let pathAnimation = CABasicAnimation(keyPath: "path")
         pathAnimation.fromValue = waveSubLayer.path
         pathAnimation.toValue = endPath.cgPath
-        pathAnimation.duration = 0.4
+        pathAnimation.duration = duration
         pathAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         pathAnimation.isRemovedOnCompletion = false
         pathAnimation.fillMode = CAMediaTimingFillMode.forwards
