@@ -5,11 +5,17 @@
 [![License](https://img.shields.io/cocoapods/l/WaveTab.svg?style=flat)](https://cocoapods.org/pods/WaveTab)
 [![Platform](https://img.shields.io/cocoapods/p/WaveTab.svg?style=flat)](https://cocoapods.org/pods/WaveTab)
 
+## About
+
+WaveTab is a `UITabBarController` that acts like a wave when moving between tabs. It works everywhere you'd expect it to, rotates, and scales according to device. It was inspired by a [plat4m](https://www.instagram.com/p/BtyXrgLjVkD/?igshid=8fsg1k1l0tt9) design.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+- Swift 4.2
+- iOS 10.0
 
 ## Installation
 
@@ -22,7 +28,7 @@ pod 'WaveTab'
 
 ## Author
 
-Matthew Pierce, mapierce@tcd.ie
+WaveTab was created by Matthew Pierce ([@PierceMatthew](https://twitter.com/PierceMatthew))
 
 ## License
 
