@@ -21,7 +21,7 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         
     }
     
-    var presenter: WaveTabBarPresenter!
+    private var presenter: WaveTabBarPresenter!
     private var circle: UIView?
     private var imageView: UIImageView?
     
