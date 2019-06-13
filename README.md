@@ -1,4 +1,4 @@
-# WaveTab
+![logo](Images/logo.png)
 
 [![Build Status](https://app.bitrise.io/app/872a9d3de5f313cb/status.svg?token=1CGq75nCwZ7K0HnlDgCamA&branch=master)](https://app.bitrise.io/app/872a9d3de5f313cb)
 [![Version](https://img.shields.io/cocoapods/v/WaveTab.svg?style=flat)](https://cocoapods.org/pods/WaveTab)
