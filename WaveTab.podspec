@@ -16,7 +16,7 @@ A UITabBarController that moves like a wave as the user switches between tabs
 
   s.homepage         = 'https://github.com/mapierce/WaveTab'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Matthew Pierce' => 'mapierce@tcd.ie' }
+  s.author           = { 'Matthew Pierce' => 'mp.mapierce@gmail.com' }
   s.source           = { :git => 'https://github.com/mapierce/WaveTab', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/PierceMatthew'
   s.ios.deployment_target = '10.0'
