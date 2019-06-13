@@ -5,19 +5,21 @@
 [![License](https://img.shields.io/cocoapods/l/WaveTab.svg?style=flat)](https://cocoapods.org/pods/WaveTab)
 [![Platform](https://img.shields.io/cocoapods/p/WaveTab.svg?style=flat)](https://cocoapods.org/pods/WaveTab)
 
-## About
+## 🤔 About 
 
-WaveTab is a `UITabBarController` that acts like a wave when moving between tabs. It works everywhere you'd expect it to, rotates, and scales according to device. It was inspired by a [plat4m](https://www.instagram.com/p/BtyXrgLjVkD/?igshid=8fsg1k1l0tt9) design.
+WaveTab is a `UITabBarController` that acts like a wave when moving between tabs. It works everywhere you'd expect it to, rotates, and scales according to device. It was inspired by a [plat4m](https://www.instagram.com/p/BtyXrgLjVkD/?igshid=8fsg1k1l0tt9) design. Please see below for a small screen recording of it in action.
 
-## Example
+![animation](https://media.giphy.com/media/kEcHOyKbvfqvFEX91x/giphy.gif)
+
+## 🌊 Example 
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+## ✅ Requirements 
 - Swift 4.2
 - iOS 10.0
 
-## Installation
+## 📲 Installation 
 
 WaveTab is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -26,10 +28,16 @@ it, simply add the following line to your Podfile:
 pod 'WaveTab'
 ```
 
-## Author
+## 👨‍👩‍👧‍👦 Contributing
+
+If you run into any problems, please submit an issue. Pull requests are also welcome! By contributing to WaveTab you agree that your contributions will be licensed under its MIT license.
+
+If you use WaveTab in your app I'd love to hear from you on [Twitter](https://twitter.com/PierceMatthew)!
+
+## 🙋‍♂️ Author
 
 WaveTab was created by Matthew Pierce ([@PierceMatthew](https://twitter.com/PierceMatthew))
 
-## License
+## 🔖 License
 
 WaveTab is available under the MIT license. See the LICENSE file for more info.
