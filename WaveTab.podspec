@@ -21,6 +21,6 @@ A UITabBarController that moves like a wave as the user switches between tabs
   s.social_media_url = 'https://twitter.com/PierceMatthew'
   s.ios.deployment_target = '10.0'
   s.source_files = 'WaveTab/Classes/**/*'
-  s.swift_version = '5.0'
+  s.swift_version = '4.2'
   s.frameworks = 'UIKit'
 end
