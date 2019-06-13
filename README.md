@@ -1,6 +1,6 @@
 # WaveTab
 
-[![CI Status](https://img.shields.io/travis/Matthew Pierce/WaveTab.svg?style=flat)](https://travis-ci.org/Matthew Pierce/WaveTab)
+[![Build Status](https://app.bitrise.io/app/872a9d3de5f313cb/status.svg?token=1CGq75nCwZ7K0HnlDgCamA&branch=master)](https://app.bitrise.io/app/872a9d3de5f313cb)
 [![Version](https://img.shields.io/cocoapods/v/WaveTab.svg?style=flat)](https://cocoapods.org/pods/WaveTab)
 [![License](https://img.shields.io/cocoapods/l/WaveTab.svg?style=flat)](https://cocoapods.org/pods/WaveTab)
 [![Platform](https://img.shields.io/cocoapods/p/WaveTab.svg?style=flat)](https://cocoapods.org/pods/WaveTab)
