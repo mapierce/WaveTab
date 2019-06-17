@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
+open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     
     private struct Constants {
         
@@ -48,7 +48,7 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         presenter = WaveTabBarPresenterBase(view: self)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         presenter = WaveTabBarPresenterBase(view: self)
@@ -56,13 +56,13 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     
     // MARK: - Lifecycle
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
         presenter.viewDidLoad()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         presenter.viewDidAppear(portrait: UIDevice.current.orientation.isPortrait)
@@ -70,11 +70,11 @@ class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     
     // MARK: - Overridden functions
     
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+    override open func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         presenter.tabBarDidSelectItem(with: item.tag)
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    override open func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
         DispatchQueue.main.async {

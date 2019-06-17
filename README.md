@@ -35,7 +35,9 @@ and run `pod install`
 
 ## 👩‍💻 How to use
 
-WaveTab can be used both programmatically and through storyboards. To use it programmatically, simply replace `UITabBarController` with `WaveTab` and it'll handle the rest. For usage in storyboards, just set your class of the selected `UITabBarController` to be a `WaveTab`.
+WaveTab can be used both programmatically and through storyboards. To use it programmatically, simply replace `UITabBarController` with `WaveTabBarController` and it'll handle the rest. For usage in storyboards, just set your class of the selected `UITabBarController` to be a `WaveTabBarController`.
+
+If you inherit from the `WaveTabBarController` and call `func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem)`, you must call to the `super` class.
 
 ## 👨‍👩‍👧‍👦 Contributing
 
