@@ -9,7 +9,10 @@
 
 WaveTab is a `UITabBarController` that acts like a wave when moving between tabs. It works everywhere you'd expect it to, rotates, and scales according to device. It was inspired by a [plat4m](https://www.instagram.com/p/BtyXrgLjVkD/?igshid=8fsg1k1l0tt9) design. Please see below for a small screen recording of it in action.
 
-![animation](https://media.giphy.com/media/kEcHOyKbvfqvFEX91x/giphy.gif)
+<p align="center">
+  <img src="https://media.giphy.com/media/kEcHOyKbvfqvFEX91x/giphy.gif">
+</p>
+
 
 ## 🌊 Demo 
 
