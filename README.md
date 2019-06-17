@@ -11,13 +11,9 @@ WaveTab is a `UITabBarController` that acts like a wave when moving between tabs
 
 ![animation](https://media.giphy.com/media/kEcHOyKbvfqvFEX91x/giphy.gif)
 
-## 🌊 Example 
+## 🌊 Demo 
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## ✅ Requirements 
-- Swift 4.2
-- iOS 10.0
 
 ## 📲 Installation 
 
@@ -27,6 +23,16 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'WaveTab'
 ```
+
+and run `pod install`
+
+## ✅ Requirements 
+- Swift 4.2
+- iOS 10.0
+
+## 👩‍💻 How to use
+
+WaveTab can be used both programmatically and through storyboards. To use it programmatically, simply replace `UITabBarController` with `WaveTab` and it'll handle the rest. For usage in storyboards, just set your class of the selected `UITabBarController` to be a `WaveTab`.
 
 ## 👨‍👩‍👧‍👦 Contributing
 
