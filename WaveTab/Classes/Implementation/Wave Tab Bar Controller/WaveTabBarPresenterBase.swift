@@ -17,6 +17,7 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
         static let bigCircle: Float = 57
         static let circleAnimationDuration: TimeInterval = 0.2
         static let waveAnimationDuration: TimeInterval = Constants.circleAnimationDuration * 2
+        static let showHideAnimationDuration: TimeInterval = 0.3
         
     }
 
@@ -33,10 +34,12 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
     
     func viewDidLoad() {
         view.disableTransparentTabBar()
+        view.showTabBar(false, animated: false, over: Constants.showHideAnimationDuration)
     }
     
     func viewDidAppear(portrait portraitOrientation: Bool) {
         isPortrait = portraitOrientation
+        view.showTabBar(true, animated: true, over: Constants.showHideAnimationDuration)
         view.setupTabBarTags()
         view.setupCurve(isPortrait ? Constants.bigRadius : Constants.smallRadius)
         view.setupCircle(isPortrait ? Constants.bigCircle : Constants.smallCircle)

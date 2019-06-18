@@ -9,6 +9,8 @@ import Foundation
 
 protocol WaveTabBarProtocol: class {
     
+    func showTabBar(_ show: Bool, animated: Bool, over duration: TimeInterval)
+    
     func disableTransparentTabBar()
     
     func setupTabBarTags()

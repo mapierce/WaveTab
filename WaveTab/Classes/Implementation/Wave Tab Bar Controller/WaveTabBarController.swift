@@ -40,29 +40,16 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         return tabBar.subviews.filter { String(describing: type(of: $0)) == Constants.tabBarButtonType }
     }()
     
-    // MARK: - Initialization
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
-        presenter = WaveTabBarPresenterBase(view: self)
-    }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        presenter = WaveTabBarPresenterBase(view: self)
-    }
-    
     // MARK: - Lifecycle
     
-    override open func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter = WaveTabBarPresenterBase(view: self)
         presenter.viewDidLoad()
     }
     
-    override open func viewDidAppear(_ animated: Bool) {
+    open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         presenter.viewDidAppear(portrait: UIDevice.current.orientation.isPortrait)
@@ -70,11 +57,11 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     
     // MARK: - Overridden functions
     
-    override open func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+    open override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         presenter.tabBarDidSelectItem(with: item.tag)
     }
     
-    override open func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
         DispatchQueue.main.async {
@@ -83,6 +70,16 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     }
     
     // MARK: - WaveTabBarProtocol functions
+    
+    func showTabBar(_ show: Bool, animated: Bool, over duration: TimeInterval) {
+        guard animated else {
+            tabBar.alpha = show ? Constants.fullAlpha : Constants.emptyAlpha
+            return
+        }
+        UIView.animate(withDuration: duration) {
+            self.tabBar.alpha = show ? Constants.fullAlpha : Constants.emptyAlpha
+        }
+    }
     
     func disableTransparentTabBar() {
         tabBar.isTranslucent = true

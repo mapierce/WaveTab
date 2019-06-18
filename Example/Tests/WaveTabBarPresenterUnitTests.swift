@@ -33,18 +33,22 @@ final class WaveTabBarPresenterUnitTests: XCTestCase {
     // MARK: - Unit test methods
     
     func testViewDidLoad() {
+        XCTAssertFalse(view.showTabBarCalled)
         XCTAssertFalse(view.disableTransparentTabBarCalled)
         presenter.viewDidLoad()
+        XCTAssertTrue(view.showTabBarCalled)
         XCTAssertTrue(view.disableTransparentTabBarCalled)
     }
     
     func testViewDidAppear() {
+        XCTAssertFalse(view.showTabBarCalled)
         XCTAssertFalse(view.setupTabBarTagsCalled)
         XCTAssertFalse(view.setupCurveCalled)
         XCTAssertFalse(view.setupCircleCalled)
         XCTAssertFalse(view.setupImageViewCalled)
         XCTAssertFalse(view.setupTabBarStylingCalled)
         presenter.viewDidAppear(portrait: true)
+        XCTAssertTrue(view.showTabBarCalled)
         XCTAssertTrue(view.setupTabBarTagsCalled)
         XCTAssertTrue(view.setupCurveCalled)
         XCTAssertTrue(view.setupCircleCalled)
@@ -96,6 +100,7 @@ final class WaveTabBarPresenterUnitTests: XCTestCase {
 
 private class WaveTabBarControllerMock: WaveTabBarProtocol {
     
+    var showTabBarCalled = false
     var disableTransparentTabBarCalled = false
     var setupTabBarTagsCalled = false
     var setupCurveCalled = false
@@ -108,6 +113,10 @@ private class WaveTabBarControllerMock: WaveTabBarProtocol {
     var moveCurveCalled = false
     var moveCircleCalled = false
     var updateCircleCenterCalled = false
+    
+    func showTabBar(_ show: Bool, animated: Bool, over duration: TimeInterval) {
+        showTabBarCalled = true
+    }
     
     func disableTransparentTabBar() {
         disableTransparentTabBarCalled = true
