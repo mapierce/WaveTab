@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yKN-tP-2x9">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="YsV-1D-ciW">
+            <objects>
+                <viewController id="Ajl-pT-5Oq" customClass="HomeViewController" customModule="WaveTab_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3l3-zK-Gqy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2H-0H-hHw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="298.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show me WaveTab with some tabs!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="v1m-a8-MO8">
+                                        <rect key="frame" x="8" y="260.5" width="398" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.163341552" green="0.56715512280000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="v1m-a8-MO8" secondAttribute="bottom" constant="8" id="2z0-nl-oZ9"/>
+                                    <constraint firstItem="v1m-a8-MO8" firstAttribute="leading" secondItem="r2H-0H-hHw" secondAttribute="leading" constant="8" id="6IB-mu-pch"/>
+                                    <constraint firstAttribute="trailing" secondItem="v1m-a8-MO8" secondAttribute="trailing" constant="8" id="OZT-K5-ljZ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LpS-s2-dVK" appends="YES" id="GWW-hv-iEn"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYI-Sw-avm">
+                                <rect key="frame" x="0.0" y="298.5" width="414" height="299"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now let's see it with lots of tabs..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Xk7-t3-sfe">
+                                        <rect key="frame" x="8" y="261" width="398" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.75" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Xk7-t3-sfe" secondAttribute="bottom" constant="8" id="S3b-Lc-e8Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xk7-t3-sfe" secondAttribute="trailing" constant="8" id="YO3-5z-0WC"/>
+                                    <constraint firstItem="Xk7-t3-sfe" firstAttribute="leading" secondItem="RYI-Sw-avm" secondAttribute="leading" constant="8" id="qP1-Sy-PmT"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wUF-3l-fXM" appends="YES" id="yar-lV-S73"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eap-iY-GQZ">
+                                <rect key="frame" x="0.0" y="597.5" width="414" height="298.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="And how about some custom tabs?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ebu-Mk-4gh">
+                                        <rect key="frame" x="8" y="226.5" width="398" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.66788150089999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="ebu-Mk-4gh" firstAttribute="leading" secondItem="eap-iY-GQZ" secondAttribute="leading" constant="8" id="7Mf-Ve-1Rq"/>
+                                    <constraint firstAttribute="trailing" secondItem="ebu-Mk-4gh" secondAttribute="trailing" constant="8" id="URm-ma-KDA"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Tf6-tA-5o6" appends="YES" id="HNm-my-fZx"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eap-iY-GQZ" firstAttribute="leading" secondItem="UHo-h8-D9N" secondAttribute="leading" id="0J3-bU-I69"/>
+                            <constraint firstItem="RYI-Sw-avm" firstAttribute="height" secondItem="r2H-0H-hHw" secondAttribute="height" id="2Qr-jD-YFu"/>
+                            <constraint firstItem="r2H-0H-hHw" firstAttribute="leading" secondItem="UHo-h8-D9N" secondAttribute="leading" id="Dmb-4a-5ic"/>
+                            <constraint firstItem="ebu-Mk-4gh" firstAttribute="bottom" secondItem="UHo-h8-D9N" secondAttribute="bottom" constant="-8" id="HfH-kA-kZx"/>
+                            <constraint firstItem="eap-iY-GQZ" firstAttribute="height" secondItem="r2H-0H-hHw" secondAttribute="height" id="OlX-3b-OUp"/>
+                            <constraint firstItem="r2H-0H-hHw" firstAttribute="top" secondItem="3l3-zK-Gqy" secondAttribute="top" id="QDP-1m-1OD"/>
+                            <constraint firstItem="eap-iY-GQZ" firstAttribute="top" secondItem="RYI-Sw-avm" secondAttribute="bottom" id="R6Y-Xz-Eom"/>
+                            <constraint firstItem="RYI-Sw-avm" firstAttribute="leading" secondItem="UHo-h8-D9N" secondAttribute="leading" id="TlO-Tf-EPy"/>
+                            <constraint firstItem="RYI-Sw-avm" firstAttribute="trailing" secondItem="UHo-h8-D9N" secondAttribute="trailing" id="XbB-bp-ibn"/>
+                            <constraint firstItem="eap-iY-GQZ" firstAttribute="top" secondItem="RYI-Sw-avm" secondAttribute="bottom" id="aYS-8Q-Nnp"/>
+                            <constraint firstItem="eap-iY-GQZ" firstAttribute="trailing" secondItem="UHo-h8-D9N" secondAttribute="trailing" id="cQP-yy-H2f"/>
+                            <constraint firstItem="r2H-0H-hHw" firstAttribute="trailing" secondItem="UHo-h8-D9N" secondAttribute="trailing" id="cWL-mx-tb9"/>
+                            <constraint firstItem="RYI-Sw-avm" firstAttribute="top" secondItem="r2H-0H-hHw" secondAttribute="bottom" id="dMN-kq-PkK"/>
+                            <constraint firstAttribute="bottom" secondItem="eap-iY-GQZ" secondAttribute="bottom" id="fU3-OU-0t0"/>
+                            <constraint firstItem="RYI-Sw-avm" firstAttribute="top" secondItem="r2H-0H-hHw" secondAttribute="bottom" id="lbn-V4-7jS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UHo-h8-D9N"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="APW-KF-pHW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9YC-aW-F4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LpS-s2-dVK">
+                    <connections>
+                        <action selector="showSomeTabsButtonTapped:" destination="Ajl-pT-5Oq" id="3wo-67-E8o"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wUF-3l-fXM">
+                    <connections>
+                        <action selector="showManyTabsButtonTapped:" destination="Ajl-pT-5Oq" id="8y9-I0-nyD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Tf6-tA-5o6">
+                    <connections>
+                        <action selector="showCustomTabsButtonTapped:" destination="Ajl-pT-5Oq" id="6YI-4u-veA"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="895.6521739130435" y="119.86607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xex-YR-j0b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yKN-tP-2x9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vhZ-bR-rYE">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ajl-pT-5Oq" kind="relationship" relationship="rootViewController" id="zNO-On-yEY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGR-Ld-GrP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14.492753623188406" y="119.86607142857142"/>
+        </scene>
+    </scenes>
+</document>

@@ -8,9 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		32B7CE523D8085739E2F4ED9 /* Pods_WaveTab_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF4BF08F5777EC9D4D77E0D /* Pods_WaveTab_Tests.framework */; };
+		3472E77622B94F05004FA653 /* Custom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3472E77522B94F05004FA653 /* Custom.storyboard */; };
 		349AF33822B17E1A00F462CC /* WaveTabBarPresenterUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AF33722B17E1A00F462CC /* WaveTabBarPresenterUnitTests.swift */; };
+		34A2D26F22BAA1C6008B6416 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A2D26E22BAA1C6008B6416 /* Home.storyboard */; };
+		34A2D28F22BAA5B4008B6416 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2D28E22BAA5B4008B6416 /* HomeViewController.swift */; };
+		34A2D29222BAA6C3008B6416 /* Some.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A2D29122BAA6C3008B6416 /* Some.storyboard */; };
+		34A2D29422BAA87F008B6416 /* SomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2D29322BAA87F008B6416 /* SomeTabViewController.swift */; };
+		34A2D29B22BAB0CB008B6416 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2D29A22BAB0CB008B6416 /* Test.swift */; };
+		34C5FE9122B83E03001D7A3F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5FE9022B83E03001D7A3F /* CustomTabBarController.swift */; };
+		34C5FE9322B83F94001D7A3F /* ManyTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5FE9222B83F94001D7A3F /* ManyTabViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
+		607FACDB1AFB9204008FA782 /* Many.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Many.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		7BFE41BEF38702411F22DEF2 /* Pods_WaveTab_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF604FA7070E680FAECA2760 /* Pods_WaveTab_Example.framework */; };
@@ -29,12 +37,20 @@
 /* Begin PBXFileReference section */
 		1DF4BF08F5777EC9D4D77E0D /* Pods_WaveTab_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaveTab_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		246E19E9FAD5AF2C36F61251 /* Pods-WaveTab_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveTab_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaveTab_Tests/Pods-WaveTab_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3472E77522B94F05004FA653 /* Custom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Custom.storyboard; sourceTree = "<group>"; };
 		349AF33722B17E1A00F462CC /* WaveTabBarPresenterUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveTabBarPresenterUnitTests.swift; sourceTree = "<group>"; };
+		34A2D26E22BAA1C6008B6416 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		34A2D28E22BAA5B4008B6416 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		34A2D29122BAA6C3008B6416 /* Some.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Some.storyboard; sourceTree = "<group>"; };
+		34A2D29322BAA87F008B6416 /* SomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeTabViewController.swift; sourceTree = "<group>"; };
+		34A2D29A22BAB0CB008B6416 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		34C5FE9022B83E03001D7A3F /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		34C5FE9222B83F94001D7A3F /* ManyTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManyTabViewController.swift; sourceTree = "<group>"; };
 		3EF357E85FBD2B50FFDA5CB8 /* Pods-WaveTab_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveTab_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaveTab_Example/Pods-WaveTab_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* WaveTab_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaveTab_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Many.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* WaveTab_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaveTab_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +94,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		34A2D29022BAA642008B6416 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				34A2D26E22BAA1C6008B6416 /* Home.storyboard */,
+				34A2D28E22BAA5B4008B6416 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		34A2D29522BAA99E008B6416 /* Some Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				34A2D29122BAA6C3008B6416 /* Some.storyboard */,
+				34A2D29322BAA87F008B6416 /* SomeTabViewController.swift */,
+				34A2D29A22BAB0CB008B6416 /* Test.swift */,
+			);
+			path = "Some Tabs";
+			sourceTree = "<group>";
+		};
+		34A2D29622BAAB8C008B6416 /* Many Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD91AFB9204008FA782 /* Many.storyboard */,
+				34C5FE9222B83F94001D7A3F /* ManyTabViewController.swift */,
+			);
+			path = "Many Tabs";
+			sourceTree = "<group>";
+		};
+		34A2D29922BAAFDC008B6416 /* Custom Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				34C5FE9022B83E03001D7A3F /* CustomTabBarController.swift */,
+				3472E77522B94F05004FA653 /* Custom.storyboard */,
+			);
+			path = "Custom Tabs";
+			sourceTree = "<group>";
+		};
 		34C0393022B188B9003CFE8E /* App Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +142,10 @@
 		34C0393122B188C5003CFE8E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				34A2D29522BAA99E008B6416 /* Some Tabs */,
+				34A2D29622BAAB8C008B6416 /* Many Tabs */,
+				34A2D29922BAAFDC008B6416 /* Custom Tabs */,
+				34A2D29022BAA642008B6416 /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,9 +316,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				607FACDB1AFB9204008FA782 /* Many.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				34A2D29222BAA6C3008B6416 /* Some.storyboard in Resources */,
+				34A2D26F22BAA1C6008B6416 /* Home.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				3472E77622B94F05004FA653 /* Custom.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +408,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34A2D29422BAA87F008B6416 /* SomeTabViewController.swift in Sources */,
+				34A2D28F22BAA5B4008B6416 /* HomeViewController.swift in Sources */,
+				34C5FE9322B83F94001D7A3F /* ManyTabViewController.swift in Sources */,
+				34C5FE9122B83E03001D7A3F /* CustomTabBarController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				34A2D29B22BAB0CB008B6416 /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,12 +436,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
+		607FACD91AFB9204008FA782 /* Many.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				607FACDA1AFB9204008FA782 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Many.storyboard;
 			sourceTree = "<group>";
 		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {

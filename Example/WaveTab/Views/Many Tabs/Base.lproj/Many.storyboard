@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Many Tab View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ManyTabViewController" customModule="WaveTab_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="-1047" y="628"/>
         </scene>
-        <!--View Controller-->
+        <!--Many Tab View Controller-->
         <scene sceneID="6Jl-8E-Hg8">
             <objects>
-                <viewController id="Mds-R2-oKu" sceneMemberID="viewController">
+                <viewController id="Mds-R2-oKu" customClass="ManyTabViewController" customModule="WaveTab_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y1w-1n-l2F"/>
                         <viewControllerLayoutGuide type="bottom" id="T7I-kc-sfw"/>
@@ -71,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="-1047" y="1342"/>
         </scene>
-        <!--View Controller-->
+        <!--Many Tab View Controller-->
         <scene sceneID="rUA-sX-J46">
             <objects>
-                <viewController id="ijG-Ka-x0E" sceneMemberID="viewController">
+                <viewController id="ijG-Ka-x0E" customClass="ManyTabViewController" customModule="WaveTab_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fhg-Xz-M4u"/>
                         <viewControllerLayoutGuide type="bottom" id="TVL-s0-Jm2"/>
@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="-1047" y="2096"/>
         </scene>
-        <!--View Controller-->
+        <!--Many Tab View Controller-->
         <scene sceneID="NAX-Dm-l9r">
             <objects>
-                <viewController id="OK0-Px-mEQ" sceneMemberID="viewController">
+                <viewController id="OK0-Px-mEQ" customClass="ManyTabViewController" customModule="WaveTab_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h6z-hG-s7v"/>
                         <viewControllerLayoutGuide type="bottom" id="gqr-Aq-lgN"/>
@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="-74" y="2096"/>
         </scene>
-        <!--View Controller-->
+        <!--Many Tab View Controller-->
         <scene sceneID="h1n-23-Jjh">
             <objects>
-                <viewController id="TX4-M6-MFG" sceneMemberID="viewController">
+                <viewController id="TX4-M6-MFG" customClass="ManyTabViewController" customModule="WaveTab_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ly7-hV-cs6"/>
                         <viewControllerLayoutGuide type="bottom" id="29T-dM-Y7G"/>
@@ -164,10 +164,10 @@
             </objects>
             <point key="canvasLocation" x="897" y="2096"/>
         </scene>
-        <!--View Controller-->
+        <!--Many Tab View Controller-->
         <scene sceneID="Drc-23-s3B">
             <objects>
-                <viewController id="sdU-ya-06H" sceneMemberID="viewController">
+                <viewController id="sdU-ya-06H" customClass="ManyTabViewController" customModule="WaveTab_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VHb-0h-ygu"/>
                         <viewControllerLayoutGuide type="bottom" id="CJ8-Fn-WCM"/>
@@ -195,10 +195,10 @@
             </objects>
             <point key="canvasLocation" x="-74" y="1342"/>
         </scene>
-        <!--View Controller-->
+        <!--Many Tab View Controller-->
         <scene sceneID="OtZ-3F-XH4">
             <objects>
-                <viewController id="db3-xJ-q3R" sceneMemberID="viewController">
+                <viewController id="db3-xJ-q3R" customClass="ManyTabViewController" customModule="WaveTab_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gsM-FT-6UJ"/>
                         <viewControllerLayoutGuide type="bottom" id="n0C-cq-nJo"/>
@@ -226,10 +226,10 @@
             </objects>
             <point key="canvasLocation" x="897" y="1342"/>
         </scene>
-        <!--View Controller-->
+        <!--Many Tab View Controller-->
         <scene sceneID="Yv0-8l-QhL">
             <objects>
-                <viewController id="mGS-GM-z8d" sceneMemberID="viewController">
+                <viewController id="mGS-GM-z8d" customClass="ManyTabViewController" customModule="WaveTab_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="swv-mv-fYD"/>
                         <viewControllerLayoutGuide type="bottom" id="ib8-Yg-uhA"/>
@@ -257,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="-74" y="629"/>
         </scene>
-        <!--View Controller-->
+        <!--Many Tab View Controller-->
         <scene sceneID="Uc1-wF-rgs">
             <objects>
-                <viewController id="LwZ-9J-s3L" sceneMemberID="viewController">
+                <viewController id="LwZ-9J-s3L" customClass="ManyTabViewController" customModule="WaveTab_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fji-4A-6TU"/>
                         <viewControllerLayoutGuide type="bottom" id="akV-6e-mUc"/>
