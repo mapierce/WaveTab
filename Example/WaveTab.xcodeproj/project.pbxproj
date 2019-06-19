@@ -14,7 +14,6 @@
 		34A2D28F22BAA5B4008B6416 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2D28E22BAA5B4008B6416 /* HomeViewController.swift */; };
 		34A2D29222BAA6C3008B6416 /* Some.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A2D29122BAA6C3008B6416 /* Some.storyboard */; };
 		34A2D29422BAA87F008B6416 /* SomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2D29322BAA87F008B6416 /* SomeTabViewController.swift */; };
-		34A2D29B22BAB0CB008B6416 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2D29A22BAB0CB008B6416 /* Test.swift */; };
 		34C5FE9122B83E03001D7A3F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5FE9022B83E03001D7A3F /* CustomTabBarController.swift */; };
 		34C5FE9322B83F94001D7A3F /* ManyTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5FE9222B83F94001D7A3F /* ManyTabViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -43,7 +42,6 @@
 		34A2D28E22BAA5B4008B6416 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		34A2D29122BAA6C3008B6416 /* Some.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Some.storyboard; sourceTree = "<group>"; };
 		34A2D29322BAA87F008B6416 /* SomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeTabViewController.swift; sourceTree = "<group>"; };
-		34A2D29A22BAB0CB008B6416 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		34C5FE9022B83E03001D7A3F /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		34C5FE9222B83F94001D7A3F /* ManyTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManyTabViewController.swift; sourceTree = "<group>"; };
 		3EF357E85FBD2B50FFDA5CB8 /* Pods-WaveTab_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveTab_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaveTab_Example/Pods-WaveTab_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 			children = (
 				34A2D29122BAA6C3008B6416 /* Some.storyboard */,
 				34A2D29322BAA87F008B6416 /* SomeTabViewController.swift */,
-				34A2D29A22BAB0CB008B6416 /* Test.swift */,
 			);
 			path = "Some Tabs";
 			sourceTree = "<group>";
@@ -413,7 +410,6 @@
 				34C5FE9322B83F94001D7A3F /* ManyTabViewController.swift in Sources */,
 				34C5FE9122B83E03001D7A3F /* CustomTabBarController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				34A2D29B22BAB0CB008B6416 /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

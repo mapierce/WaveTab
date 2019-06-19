@@ -10,15 +10,19 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    private struct Constants {
+        
+        static let homeStoryboard = "Home"
+        
+    }
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = UIStoryboard.init(name: "Home", bundle: nil).instantiateInitialViewController()!
-//        let vc = CustomTabBarController()
+        let vc = UIStoryboard.init(name: Constants.homeStoryboard, bundle: nil).instantiateInitialViewController()!
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
         return true
