@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WaveTab'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'A wave UITabBarController.'
   s.description      = <<-DESC
 A UITabBarController that moves like a wave as the user switches between tabs
