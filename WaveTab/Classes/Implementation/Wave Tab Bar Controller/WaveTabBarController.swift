@@ -123,10 +123,17 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         }
         waveSubLayer.fillColor = backgroundColor.cgColor
         circle?.backgroundColor = backgroundColor
-        tabBar.backgroundColor = .clear
-        tabBar.tintColor = UIColor.clear
-        tabBar.backgroundImage = UIImage()
-        tabBar.shadowImage = UIImage()
+        tabBar.tintColor = .clear
+        if #available(iOS 13.0, *) {
+            let barAppearance = UIBarAppearance()
+            barAppearance.configureWithTransparentBackground()
+            let tabBarAppearance = UITabBarAppearance(barAppearance: barAppearance)
+            tabBar.standardAppearance = tabBarAppearance
+        } else {
+            tabBar.backgroundColor = .clear
+            tabBar.backgroundImage = UIImage()
+            tabBar.shadowImage = UIImage()
+        }
     }
     
     func setupImageView(_ center: Float) {
