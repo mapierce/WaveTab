@@ -21,7 +21,9 @@ protocol WaveTabBarProtocol: class {
     
     func updateCircleSize(_ radius: Float)
     
-    func setupTabBarStyling()
+    func setupTabBarColoring()
+    
+    func setupTabBarBackground()
     
     func setupImageView(_ center: Float)
     

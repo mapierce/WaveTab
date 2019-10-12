@@ -110,7 +110,7 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         circle.layer.cornerRadius = CGFloat(radius) / 2
     }
     
-    func setupTabBarStyling() {
+    func setupTabBarColoring() {
         let backgroundColor: UIColor
         if let color = tabBar.barTintColor {
             backgroundColor = color
@@ -123,6 +123,9 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         }
         waveSubLayer.fillColor = backgroundColor.cgColor
         circle?.backgroundColor = backgroundColor
+    }
+    
+    func setupTabBarBackground() {
         tabBar.tintColor = .clear
         if #available(iOS 13.0, *) {
             let barAppearance = UIBarAppearance()

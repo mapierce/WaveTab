@@ -46,14 +46,16 @@ final class WaveTabBarPresenterUnitTests: XCTestCase {
         XCTAssertFalse(view.setupCurveCalled)
         XCTAssertFalse(view.setupCircleCalled)
         XCTAssertFalse(view.setupImageViewCalled)
-        XCTAssertFalse(view.setupTabBarStylingCalled)
+        XCTAssertFalse(view.setupTabBarColoringCalled)
+        XCTAssertFalse(view.setupTabBarBackgroundCalled)
         presenter.viewDidAppear(portrait: true)
         XCTAssertTrue(view.showTabBarCalled)
         XCTAssertTrue(view.setupTabBarTagsCalled)
         XCTAssertTrue(view.setupCurveCalled)
         XCTAssertTrue(view.setupCircleCalled)
         XCTAssertTrue(view.setupImageViewCalled)
-        XCTAssertTrue(view.setupTabBarStylingCalled)
+        XCTAssertTrue(view.setupTabBarColoringCalled)
+        XCTAssertTrue(view.setupTabBarBackgroundCalled)
     }
     
     func testViewDidRotate() {
@@ -106,7 +108,8 @@ private class WaveTabBarControllerMock: WaveTabBarProtocol {
     var setupCurveCalled = false
     var setupCircleCalled = false
     var updateCircleSizeCalled = false
-    var setupTabBarStylingCalled = false
+    var setupTabBarColoringCalled = false
+    var setupTabBarBackgroundCalled = false
     var setupImageViewCalled = false
     var updateImageViewSizeCalled = false
     var updateImageViewCalled = false
@@ -138,8 +141,12 @@ private class WaveTabBarControllerMock: WaveTabBarProtocol {
         updateCircleSizeCalled = true
     }
     
-    func setupTabBarStyling() {
-        setupTabBarStylingCalled = true
+    func setupTabBarColoring() {
+        setupTabBarColoringCalled = true
+    }
+    
+    func setupTabBarBackground() {
+        setupTabBarBackgroundCalled = true
     }
     
     func setupImageView(_ center: Float) {
