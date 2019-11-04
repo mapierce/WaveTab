@@ -19,6 +19,8 @@ protocol WaveTabBarPresenter: class {
     
     func tabBarDidSelectItem(with tag: Int)
     
+    func viewWillLayoutSubviews()
+    
     func moveCircleComplete(down movingDown: Bool)
     
 }

@@ -69,6 +69,10 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
                         down: true)
     }
     
+    func viewWillLayoutSubviews() {
+        view.setupTabBarColoring()
+    }
+    
     func moveCircleComplete(down movingDown: Bool) {
         view.updateImageView()
         view.updateCircleCenter()

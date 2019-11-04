@@ -69,6 +69,10 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         }
     }
     
+    open override func viewWillLayoutSubviews() {
+        presenter.viewWillLayoutSubviews()
+    }
+    
     // MARK: - WaveTabBarProtocol functions
     
     func showTabBar(_ show: Bool, animated: Bool, over duration: TimeInterval) {
@@ -112,14 +116,15 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     
     func setupTabBarColoring() {
         let backgroundColor: UIColor
-        if let color = tabBar.barTintColor {
-            backgroundColor = color
-        } else {
-            switch tabBar.barStyle {
-            case .black, .blackTranslucent: backgroundColor = Constants.blackBackgroundColor
-            case .default: backgroundColor = Constants.whiteBackgroundColor
-            @unknown default: backgroundColor = Constants.whiteBackgroundColor
+        if #available(iOS 13.0, *) {
+            switch traitCollection.userInterfaceStyle {
+            case .light: backgroundColor = Constants.whiteBackgroundColor
+            case .dark: backgroundColor = Constants.blackBackgroundColor
+            case .unspecified: backgroundColor = getColorFromTabBarStyle()
+            @unknown default: backgroundColor = getColorFromTabBarStyle()
             }
+        } else {
+            backgroundColor = getColorFromTabBarStyle()
         }
         waveSubLayer.fillColor = backgroundColor.cgColor
         circle?.backgroundColor = backgroundColor
@@ -200,6 +205,16 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         let verticalPosition = down ? circle.center.y + CGFloat(offset) : circle.center.y - CGFloat(offset)
         circle.center = CGPoint(x: circle.center.x, y: verticalPosition)
         circle.alpha = down ? Constants.emptyAlpha : Constants.fullAlpha
+    }
+    
+    // MARK: - Private functions
+    
+    private func getColorFromTabBarStyle() -> UIColor {
+        switch tabBar.barStyle {
+        case .black, .blackTranslucent: return Constants.blackBackgroundColor
+        case .default: return Constants.whiteBackgroundColor
+        @unknown default: return Constants.whiteBackgroundColor
+        }
     }
     
 }

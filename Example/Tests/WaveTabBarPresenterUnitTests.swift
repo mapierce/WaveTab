@@ -78,6 +78,12 @@ final class WaveTabBarPresenterUnitTests: XCTestCase {
         XCTAssertTrue(view.moveCircleCalled)
     }
     
+    func testViewWillLayoutSubviews() {
+        XCTAssertFalse(view.setupTabBarColoringCalled)
+        presenter.viewWillLayoutSubviews()
+        XCTAssertTrue(view.setupTabBarColoringCalled)
+    }
+    
     func testMoveCircleCompleteDown() {
         XCTAssertFalse(view.updateImageViewCalled)
         XCTAssertFalse(view.updateCircleCenterCalled)
