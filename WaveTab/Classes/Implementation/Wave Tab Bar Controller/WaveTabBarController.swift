@@ -49,6 +49,10 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         presenter.viewDidLoad()
     }
     
+//    open override func viewWillAppear(_ animated: Bool) {
+//        presenter.viewDidLoad()
+//    }
+    
     open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -59,6 +63,10 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     
     open override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         presenter.tabBarDidSelectItem(with: item.tag)
+    }
+    open func didTapItem(tag:Int){
+        presenter.tabBarDidSelectItem(with: tag)
+        
     }
     
     open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -99,14 +107,39 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         tabBar.layer.insertSublayer(waveSubLayer, above: tabBar.layer.sublayers?.first)
     }
     
+//    func setupCircle(_ width: Float) {
+//        circle = UIView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(width), height: CGFloat(width)))
+//        circle?.layer.cornerRadius = CGFloat(width) / 2
+//        circle?.center = CGPoint(x: tabBarItems[safeSelectedIndex].center.x, y: 0.0)
+//        //circle?.layer.borderWidth = Constants.borderWidth
+//        //circle?.layer.borderColor = Constants.borderColor
+//       // circle?.layer.cornerRadius = 17
+//        circle?.removeFromSuperview()
+//        circle?.clipsToBounds = true;
+//        circle?.backgroundColor = UIColor.white
+//        circle?.layer.shadowColor = UIColor.lightGray.cgColor
+//        circle?.layer.shadowOpacity = 0.8
+//        circle?.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+//        circle?.layer.shadowRadius = 6.0
+//        circle?.layer.masksToBounds = false
+//        tabBar.addSubview(circle!)
+//    }
     func setupCircle(_ width: Float) {
+        circle?.removeFromSuperview() // ->> Add this line
         circle = UIView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(width), height: CGFloat(width)))
         circle?.layer.cornerRadius = CGFloat(width) / 2
         circle?.center = CGPoint(x: tabBarItems[safeSelectedIndex].center.x, y: 0.0)
-        circle?.layer.borderWidth = Constants.borderWidth
-        circle?.layer.borderColor = Constants.borderColor
-        tabBar.addSubview(circle!)
+        circle?.clipsToBounds = true;
+        //circle?.backgroundColor = UIColor.white
+        circle?.layer.shadowColor = UIColor.lightGray.cgColor
+        circle?.layer.shadowOpacity = 0.8
+        circle?.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        circle?.layer.shadowRadius = 6.0
+        circle?.layer.masksToBounds = false
+    tabBar.addSubview(circle!)
     }
+
+
     
     func updateCircleSize(_ radius: Float) {
         guard let circle = circle else { return }
@@ -144,13 +177,25 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         }
     }
     
+//    func setupImageView(_ center: Float) {
+//        let image = viewControllers?[safeSelectedIndex].tabBarItem.selectedImage?.withRenderingMode(.alwaysTemplate)
+//        imageView?.removeFromSuperview()
+//        imageView = UIImageView(image: image)
+//        imageView?.contentMode = UIView.ContentMode.scaleAspectFit
+//        imageView?.tintColor = tabBar.tintColor
+//        imageView?.contentMode = .scaleAspectFit
+//        circle?.addSubview(imageView!)
+//        imageView?.center = CGPoint(x: CGFloat(center), y: CGFloat(center))
+//    }
     func setupImageView(_ center: Float) {
-        let image = viewControllers?[safeSelectedIndex].tabBarItem.selectedImage?.withRenderingMode(.alwaysTemplate)
-        imageView = UIImageView(image: image)
-        imageView?.contentMode = UIView.ContentMode.scaleAspectFit
-        imageView?.tintColor = tabBar.tintColor
-        circle?.addSubview(imageView!)
-        imageView?.center = CGPoint(x: CGFloat(center), y: CGFloat(center))
+    let image = viewControllers?[safeSelectedIndex].tabBarItem.selectedImage
+    imageView?.removeFromSuperview() // ->> Add this line
+    imageView = UIImageView(image: image)
+        imageView?.tintColor = UIColor.init(red: 0/255, green: 90.0/255, blue: 159.0/255, alpha: 1)
+    imageView?.contentMode = UIView.ContentMode.scaleAspectFit
+    circle?.addSubview(imageView!)
+    imageView?.center = CGPoint(x: CGFloat(center), y: CGFloat(center))
+       // imageView?.backgroundColor = UIColor.red
     }
     
     func updateImageViewSize(_ center: Float) {

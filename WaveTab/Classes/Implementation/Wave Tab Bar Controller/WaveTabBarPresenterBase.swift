@@ -11,10 +11,10 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
     
     private struct Constants {
     
-        static let smallRadius: Float = 25
-        static let bigRadius: Float = 30
-        static let smallCircle: Float = 47
-        static let bigCircle: Float = 57
+        static let smallRadius: Float = 32//25
+        static let bigRadius: Float = 37//30
+        static let smallCircle: Float = 57//47
+        static let bigCircle: Float = 67//57
         static let circleAnimationDuration: TimeInterval = 0.2
         static let waveAnimationDuration: TimeInterval = Constants.circleAnimationDuration * 2
         static let showHideAnimationDuration: TimeInterval = 0.3
@@ -46,6 +46,7 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
         view.setupImageView((isPortrait ? Constants.bigCircle : Constants.smallCircle) / 2)
         view.setupTabBarColoring()
         view.setupTabBarBackground()
+        
     }
     
     func viewDidRotate(portrait portraitOrientation: Bool, at index: Int) {
@@ -67,6 +68,7 @@ class WaveTabBarPresenterBase: WaveTabBarPresenter {
         view.moveCircle(over: Constants.circleAnimationDuration,
                         offset: isPortrait ? Constants.bigRadius : Constants.smallRadius,
                         down: true)
+        view.setupImageView((isPortrait ? Constants.bigCircle : Constants.smallCircle) / 2)
     }
     
     func viewWillLayoutSubviews() {
