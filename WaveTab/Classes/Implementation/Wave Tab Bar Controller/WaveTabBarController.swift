@@ -107,23 +107,7 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         tabBar.layer.insertSublayer(waveSubLayer, above: tabBar.layer.sublayers?.first)
     }
     
-//    func setupCircle(_ width: Float) {
-//        circle = UIView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(width), height: CGFloat(width)))
-//        circle?.layer.cornerRadius = CGFloat(width) / 2
-//        circle?.center = CGPoint(x: tabBarItems[safeSelectedIndex].center.x, y: 0.0)
-//        //circle?.layer.borderWidth = Constants.borderWidth
-//        //circle?.layer.borderColor = Constants.borderColor
-//       // circle?.layer.cornerRadius = 17
-//        circle?.removeFromSuperview()
-//        circle?.clipsToBounds = true;
-//        circle?.backgroundColor = UIColor.white
-//        circle?.layer.shadowColor = UIColor.lightGray.cgColor
-//        circle?.layer.shadowOpacity = 0.8
-//        circle?.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-//        circle?.layer.shadowRadius = 6.0
-//        circle?.layer.masksToBounds = false
-//        tabBar.addSubview(circle!)
-//    }
+//
     func setupCircle(_ width: Float) {
         circle?.removeFromSuperview() // ->> Add this line
         circle = UIView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(width), height: CGFloat(width)))
@@ -177,16 +161,7 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         }
     }
     
-//    func setupImageView(_ center: Float) {
-//        let image = viewControllers?[safeSelectedIndex].tabBarItem.selectedImage?.withRenderingMode(.alwaysTemplate)
-//        imageView?.removeFromSuperview()
-//        imageView = UIImageView(image: image)
-//        imageView?.contentMode = UIView.ContentMode.scaleAspectFit
-//        imageView?.tintColor = tabBar.tintColor
-//        imageView?.contentMode = .scaleAspectFit
-//        circle?.addSubview(imageView!)
-//        imageView?.center = CGPoint(x: CGFloat(center), y: CGFloat(center))
-//    }
+// 
     func setupImageView(_ center: Float) {
     let image = viewControllers?[safeSelectedIndex].tabBarItem.selectedImage
     imageView?.removeFromSuperview() // ->> Add this line
