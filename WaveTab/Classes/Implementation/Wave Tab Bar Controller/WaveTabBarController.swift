@@ -25,6 +25,7 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     private var circle: UIView?
     private var imageView: UIImageView?
     
+    private var tabSelectedTintColor : UIColor = UIColor.clear
     private var safeSelectedIndex: Int {
         return selectedIndex < tabBarItems.count ? selectedIndex : tabBarItems.count - 1
     }
@@ -48,6 +49,7 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         presenter = WaveTabBarPresenterBase(view: self)
         presenter.viewDidLoad()
     }
+  
     
     open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -100,6 +102,11 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     }
     
     func setupCircle(_ width: Float) {
+        
+        if circle != nil { // To remove Duplicate Circles From Tabbar
+            circle?.removeFromSuperview()
+        }
+        
         circle = UIView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(width), height: CGFloat(width)))
         circle?.layer.cornerRadius = CGFloat(width) / 2
         circle?.center = CGPoint(x: tabBarItems[safeSelectedIndex].center.x, y: 0.0)
@@ -145,10 +152,15 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     }
     
     func setupImageView(_ center: Float) {
+  
         let image = viewControllers?[safeSelectedIndex].tabBarItem.selectedImage?.withRenderingMode(.alwaysTemplate)
+        if tabBar.tintColor != UIColor.clear { // To Prevent From setting Clear Color At Line 141
+            tabSelectedTintColor = tabBar.tintColor
+        }
+        
         imageView = UIImageView(image: image)
         imageView?.contentMode = UIView.ContentMode.scaleAspectFit
-        imageView?.tintColor = tabBar.tintColor
+        imageView?.tintColor = tabSelectedTintColor
         circle?.addSubview(imageView!)
         imageView?.center = CGPoint(x: CGFloat(center), y: CGFloat(center))
     }
